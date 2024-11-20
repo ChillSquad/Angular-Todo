@@ -1,6 +1,19 @@
+@use "./variables.scss" as var;
+
 // Миксины
 @mixin flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin form-style {
+  padding: var.$base-padding;
+
+  border: none;
+  border-radius: 8px;
+
+  outline: none;
+
+  background: #fff;
 }

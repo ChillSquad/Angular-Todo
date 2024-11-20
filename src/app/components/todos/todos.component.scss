@@ -1,14 +1,60 @@
+@use "../../assets/helpers/variables" as var;
+@use "../../assets/helpers/mixin" as mixin;
+
 .todos {
   display: flex;
   flex-direction: column;
-
-  gap: 10px;
 
   .done {
     text-decoration: line-through;
   }
 
+  &__form {
+    width: 100%;
+    height: 40px;
+
+    margin-bottom: 20px;
+
+    display: flex;
+
+    gap: 10px;
+
+    &-input,
+    &-submit {
+      @include mixin.form-style;
+
+      font-size: 16px;
+    }
+
+    &-input {
+      flex: 1;
+    }
+
+    &-submit {
+      cursor: pointer;
+    }
+  }
+
   &__item {
     display: flex;
+    align-items: center;
+
+    padding: 10px 0;
+
+    gap: 10px;
+
+    border-bottom: 1px solid #000;
+
+    &-content {
+      flex: 1;
+
+      cursor: pointer;
+    }
+
+    &-delete {
+      @include mixin.form-style;
+
+      cursor: pointer;
+    }
   }
 }
