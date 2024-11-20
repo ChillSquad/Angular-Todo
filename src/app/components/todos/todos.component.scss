@@ -1,0 +1,14 @@
+.todos {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+
+  .done {
+    text-decoration: line-through;
+  }
+
+  &__item {
+    display: flex;
+  }
+}
